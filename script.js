@@ -41,9 +41,10 @@ userInput()
 
 
 function userInput() {
-    input.addEventListener('keyup', function (e) {
-        switch (e.code) {
-            case 'NumpadEnter':
+    input.addEventListener('keydown', function (e) {
+        console.log(e)
+        switch (e.key) {
+            case 'Enter':
                     let userValue = parseInt(input.value)
                     if (isNaN(userValue) === true || userValue === undefined) {
                         alert('Hey! Only Numbers allowed')
@@ -56,7 +57,7 @@ function userInput() {
                         p.innerText = `The Computer guessed the number and the number is ${n}`
                         div.append(label, inp, h41)
                         label.innerText = 'Is this Correct Answer?'
-                        inp.addEventListener('keyup', function (e) {
+                        inp.addEventListener('keydown', function (e) {    
                             if (e.key === 'y' || e.key === 'KeyY' || e.key === 'n' || e.key === 'KeyN') {
                                 h41.style.textAlign = 'center'
                                 h41.style.animationName = 'hids';
@@ -76,7 +77,7 @@ function userInput() {
                         })
                         break;  
                     }       
-            case 'Space':
+            case ' ':
                 alert('Hey! Only Numbers')
                 break;
         }
