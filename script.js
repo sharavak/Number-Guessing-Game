@@ -57,8 +57,8 @@ function userInput() {
                         p.innerText = `The Computer guessed the number and the number is ${n}`
                         div.append(label, inp, h41)
                         label.innerText = 'Is this Correct Answer?'
-                        inp.addEventListener('keydown', function (e) {    
-                            if (e.key === 'y' || e.key === 'KeyY' || e.key === 'n' || e.key === 'KeyN') {
+                        inp.addEventListener('input', function () {    
+                            if (inp.value === 'y' || inp.value === 'Y' || inp.value === 'n' || inp.value === 'N') {
                                 h41.style.textAlign = 'center'
                                 h41.style.animationName = 'hids';
                                 h41.style.animationDuration = '3s';
