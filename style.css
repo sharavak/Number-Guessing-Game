@@ -1,0 +1,157 @@
+body{
+    margin: 0px;
+    box-sizing: border-box;
+    display: flex;
+    height: 100vh;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(26, 33, 37);
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    max-width: 550px;
+    height: 500px;
+    border-radius: 10px;
+    background-color: rgb(7, 63, 46);
+    position: relative;
+}
+h1{
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+    color: rgb(255, 217, 0);
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+h2{
+    color: rgb(1, 11, 44);
+    font-size: 1.5rem;
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+input{
+    display: inline-block;
+    margin: 0px auto;
+    width: 10rem;
+    height: 1.5rem;
+    font-size: 1.3rem;
+    border-radius: 5px;
+    border: none;
+}
+ul{
+    width: 100%;
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    text-align: center;
+    list-style: none;
+    color: salmon;
+    font-size: 1.3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0px;
+}
+span{
+    display: inline-block;
+    font-size: 1rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    color: white;
+   animation: hid 3s ease-in-out infinite;
+   margin-top: 0px;
+}
+ul::-webkit-scrollbar{
+    display: none;
+}
+p{
+    font-size: 1.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(51,230,255);
+    transition: 2s color ease-in-out;
+    text-align: center;
+}
+div{
+    background-color: rgb(7, 63, 46);
+}
+label{
+    color: #f5f96e;
+    font-size: 1.3rem;
+    width: 100%;
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+}
+button{
+    border: none;
+    background-color: rgb(16, 3, 29);
+    color: yellow;
+    cursor: pointer;
+    font-size: 1.3rem;
+    width: 50%;
+    margin: 0px auto;
+    border-radius: 10px;
+}
+button:hover{
+    background-color: rgb(10, 10, 0);
+    color: rgb(255, 255, 255);
+}
+@keyframes hid {
+   0%{
+       color: rgb(253, 210, 36);
+        transform: scale(0.2);
+
+   }
+    50%{
+        transform: scale(0.5);
+        color: rgb(18, 231, 28);
+
+    }
+    100%{
+        color: rgb(255, 150, 13);
+        transform: scale(1);
+    }
+}   
+@keyframes hids {
+    0%{
+        color: rgb(253, 210, 36);
+         transform: scale(0.2);
+         opacity: 0.2;
+ 
+    }
+     50%{
+         transform: scale(0.5);
+         color: rgb(18, 231, 28);
+         opacity: 0.5;
+
+ 
+     }
+     100%{
+         color: rgb(255, 150, 13);
+         transform: scale(1.5);
+         opacity: 1;
+
+     }
+ }   
+
+@media(max-width:500px){
+    h1{
+        font-size: 2.5vmax;
+    }
+    h2{
+        font-size: 1rem;
+    }
+    ul,li{
+        font-size: 0.9rem;
+    }
+    main{
+        width: 95%;
+    }
+    p{
+        font-size: 1.8vmax;
+    }
+    span{
+        font-size: 0.8rem;
+    }
+}
